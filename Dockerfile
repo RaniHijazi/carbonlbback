@@ -10,4 +10,4 @@ WORKDIR /app
 EXPOSE 80
 COPY --from=build /app/publish .
 
-ENTRYPOINT ["dotnet", "YourApp.dll"]
+ENTRYPOINT ["dotnet", "StoreProject.dll"]

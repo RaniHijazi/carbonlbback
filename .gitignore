@@ -1,1 +1,65 @@
+# Ignore build output directories
+bin/
+obj/
+
+# User-specific files
+.vscode/
+.vs/
+*.user
+*.suo
+
+# User-specific files for Visual Studio for Mac
+.idea/
+
+# Windows Installer files
+*.cab
+*.msi
+*.msm
+*.msp
+
+# Windows Installer directories
+_installer/
+
+# Windows image file
+*.iso
+*.img
+
+# Windows Installer temporary files
+*.cab
+*.msi
+
+# Windows installer folder
+_Install/
+
+# Ignore publish output
+publish/
+
+# Ignore temporary ASP.NET files
+$tf/
+**/App_Data/
+**/App_Start/
+
+# Ignore logs
+*.log
+logs/
+
+# Ignore NPM
+node_modules/
+
+# Ignore JetBrains Rider files
+.idea/
+
+# Ignore ASP.NET Core Secrets
+secrets.json
+
+# Ignore Entity Framework Core migrations
+migrations/
+
+# Ignore ASP.NET Core HTTPS dev cert
+https/
+
+# Ignore VSCode settings folder
+.vscode/
+
+# Ignore user-specific files for Visual Studio
 .vs/

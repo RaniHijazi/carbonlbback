@@ -66,3 +66,8 @@ C:\Users\User Pc\Desktop\carbonlbback\obj\Release\net6.0\refint\StoreProject.dll
 C:\Users\User Pc\Desktop\carbonlbback\obj\Release\net6.0\StoreProject.pdb
 C:\Users\User Pc\Desktop\carbonlbback\obj\Release\net6.0\StoreProject.genruntimeconfig.cache
 C:\Users\User Pc\Desktop\carbonlbback\obj\Release\net6.0\ref\StoreProject.dll
+C:\Users\User Pc\Desktop\carbonlbback\bin\Release\net6.0\publish\web.config
+C:\Users\User Pc\Desktop\carbonlbback\bin\Release\net6.0\publish\appsettings.Development.json
+C:\Users\User Pc\Desktop\carbonlbback\bin\Release\net6.0\publish\appsettings.json
+C:\Users\User Pc\Desktop\carbonlbback\bin\Release\net6.0\publish\StoreProject.deps.json
+C:\Users\User Pc\Desktop\carbonlbback\bin\Release\net6.0\publish\StoreProject.runtimeconfig.json

@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "rjsekN844b14P7kFRCtm/LATu3feglSHEezICR3B2aM=",
+  "Hash": "mTynNiboOYaGZk4SfTbpjbvGI9qzs1Xt2xDIrgPsbr0=",
   "Source": "StoreProject",
   "BasePath": "_content/StoreProject",
   "Mode": "Default",
@@ -10,17 +10,17 @@
     {
       "Name": "StoreProject\\wwwroot",
       "Source": "StoreProject",
-      "ContentRoot": "C:\\Users\\User Pc\\source\\repos\\StoreProject\\StoreProject\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\User Pc\\Desktop\\carbonlbback\\wwwroot\\",
       "BasePath": "_content/StoreProject",
       "Pattern": "**"
     }
   ],
   "Assets": [
     {
-      "Identity": "C:\\Users\\User Pc\\source\\repos\\StoreProject\\StoreProject\\wwwroot\\images\\01cef224-fe65-4266-8acf-468aaa433741.jfif",
+      "Identity": "C:\\Users\\User Pc\\Desktop\\carbonlbback\\wwwroot\\images\\01cef224-fe65-4266-8acf-468aaa433741.jfif",
       "SourceId": "StoreProject",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\User Pc\\source\\repos\\StoreProject\\StoreProject\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\User Pc\\Desktop\\carbonlbback\\wwwroot\\",
       "BasePath": "_content/StoreProject",
       "RelativePath": "images/01cef224-fe65-4266-8acf-468aaa433741.jfif",
       "AssetKind": "All",
@@ -36,10 +36,10 @@
       "OriginalItemSpec": "wwwroot\\images\\01cef224-fe65-4266-8acf-468aaa433741.jfif"
     },
     {
-      "Identity": "C:\\Users\\User Pc\\source\\repos\\StoreProject\\StoreProject\\wwwroot\\images\\02c254bb-7f71-4c43-8105-b99d287f57d4.jfif",
+      "Identity": "C:\\Users\\User Pc\\Desktop\\carbonlbback\\wwwroot\\images\\02c254bb-7f71-4c43-8105-b99d287f57d4.jfif",
       "SourceId": "StoreProject",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\User Pc\\source\\repos\\StoreProject\\StoreProject\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\User Pc\\Desktop\\carbonlbback\\wwwroot\\",
       "BasePath": "_content/StoreProject",
       "RelativePath": "images/02c254bb-7f71-4c43-8105-b99d287f57d4.jfif",
       "AssetKind": "All",
@@ -55,10 +55,10 @@
       "OriginalItemSpec": "wwwroot\\images\\02c254bb-7f71-4c43-8105-b99d287f57d4.jfif"
     },
     {
-      "Identity": "C:\\Users\\User Pc\\source\\repos\\StoreProject\\StoreProject\\wwwroot\\images\\8619227a-797e-4b23-9c89-1e34cb10bedc.jfif",
+      "Identity": "C:\\Users\\User Pc\\Desktop\\carbonlbback\\wwwroot\\images\\8619227a-797e-4b23-9c89-1e34cb10bedc.jfif",
       "SourceId": "StoreProject",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\User Pc\\source\\repos\\StoreProject\\StoreProject\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\User Pc\\Desktop\\carbonlbback\\wwwroot\\",
       "BasePath": "_content/StoreProject",
       "RelativePath": "images/8619227a-797e-4b23-9c89-1e34cb10bedc.jfif",
       "AssetKind": "All",
@@ -74,10 +74,10 @@
       "OriginalItemSpec": "wwwroot\\images\\8619227a-797e-4b23-9c89-1e34cb10bedc.jfif"
     },
     {
-      "Identity": "C:\\Users\\User Pc\\source\\repos\\StoreProject\\StoreProject\\wwwroot\\images\\c91aeb4d-0754-4144-acef-efd01e5c4293.jfif",
+      "Identity": "C:\\Users\\User Pc\\Desktop\\carbonlbback\\wwwroot\\images\\c91aeb4d-0754-4144-acef-efd01e5c4293.jfif",
       "SourceId": "StoreProject",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\User Pc\\source\\repos\\StoreProject\\StoreProject\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\User Pc\\Desktop\\carbonlbback\\wwwroot\\",
       "BasePath": "_content/StoreProject",
       "RelativePath": "images/c91aeb4d-0754-4144-acef-efd01e5c4293.jfif",
       "AssetKind": "All",
@@ -93,10 +93,10 @@
       "OriginalItemSpec": "wwwroot\\images\\c91aeb4d-0754-4144-acef-efd01e5c4293.jfif"
     },
     {
-      "Identity": "C:\\Users\\User Pc\\source\\repos\\StoreProject\\StoreProject\\wwwroot\\images\\c9af28f2-a829-4dfa-827e-21aa5d74aa46.PNG",
+      "Identity": "C:\\Users\\User Pc\\Desktop\\carbonlbback\\wwwroot\\images\\c9af28f2-a829-4dfa-827e-21aa5d74aa46.PNG",
       "SourceId": "StoreProject",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\User Pc\\source\\repos\\StoreProject\\StoreProject\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\User Pc\\Desktop\\carbonlbback\\wwwroot\\",
       "BasePath": "_content/StoreProject",
       "RelativePath": "images/c9af28f2-a829-4dfa-827e-21aa5d74aa46.PNG",
       "AssetKind": "All",

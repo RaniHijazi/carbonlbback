@@ -1,0 +1,8 @@
+build:
+  version: 1
+  steps:
+    - name: 'dotnet'
+      run: |
+        dotnet restore
+        dotnet build --configuration Release
+        dotnet publish --configuration Release --output /app/publish

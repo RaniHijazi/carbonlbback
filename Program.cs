@@ -27,11 +27,14 @@ services.AddDbContext<DataContext>(options =>
     options.UseSqlServer(connectionString);
 });
 
-// Add Swagger for API documentation (enabled in both Development and Production)
-services.AddSwaggerGen(c =>
+// Add Swagger for API documentation (enabled for both Development and Production)
+if (environment.IsDevelopment() || environment.IsProduction())
 {
-    c.SwaggerDoc("v1", new() { Title = "My API", Version = "v1" });
-});
+    services.AddSwaggerGen(c =>
+    {
+        c.SwaggerDoc("v1", new() { Title = "My API", Version = "v1" });
+    });
+}
 
 // Add CORS policy
 services.AddCors(options =>
@@ -57,17 +60,12 @@ if (environment.IsDevelopment() || environment.IsProduction())
     app.UseSwaggerUI(c =>
     {
         c.SwaggerEndpoint("/swagger/v1/swagger.json", "My API V1");
+        c.RoutePrefix = "swagger"; // This ensures that Swagger UI is available under /swagger path
     });
 }
 
-if (environment.IsDevelopment())
-{
-    app.UseHttpsRedirection(); // Allow HTTPS redirection in development
-}
-else
-{
-    app.UseHsts(); // Enforce strict transport security in production
-}
+app.UseHttpsRedirection(); // Redirect HTTP to HTTPS in production
+app.UseHsts(); // Enforce strict transport security in production
 
 // Enable static files
 app.UseStaticFiles();

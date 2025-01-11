@@ -27,14 +27,11 @@ services.AddDbContext<DataContext>(options =>
     options.UseSqlServer(connectionString);
 });
 
-// Add Swagger for API documentation (enabled only in Development)
-if (environment.IsDevelopment())
+// Add Swagger for API documentation (enabled in both Development and Production)
+services.AddSwaggerGen(c =>
 {
-    services.AddSwaggerGen(c =>
-    {
-        c.SwaggerDoc("v1", new() { Title = "My API", Version = "v1" });
-    });
-}
+    c.SwaggerDoc("v1", new() { Title = "My API", Version = "v1" });
+});
 
 // Add CORS policy
 services.AddCors(options =>
@@ -53,15 +50,18 @@ services.AddCors(options =>
 var app = builder.Build();
 
 // Configure the HTTP request pipeline
-if (environment.IsDevelopment())
+if (environment.IsDevelopment() || environment.IsProduction())
 {
-    // Enable Swagger in development
+    // Enable Swagger in both Development and Production
     app.UseSwagger();
     app.UseSwaggerUI(c =>
     {
         c.SwaggerEndpoint("/swagger/v1/swagger.json", "My API V1");
     });
+}
 
+if (environment.IsDevelopment())
+{
     app.UseHttpsRedirection(); // Allow HTTPS redirection in development
 }
 else

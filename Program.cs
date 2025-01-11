@@ -11,8 +11,8 @@ var services = builder.Services;
 // Add scoped service for the repository
 services.AddScoped<IStoreRepository, StoreRepository>();
 
-// Add controllers with views
-services.AddControllersWithViews();
+// Add API Controllers (Ensure API is added)
+services.AddControllers(); // This is required for API routing
 
 // Determine the environment
 var environment = builder.Environment;
@@ -81,10 +81,8 @@ app.UseRouting();
 // Authorization middleware
 app.UseAuthorization();
 
-// Map default controller routes
-app.MapControllerRoute(
-    name: "default",
-    pattern: "{controller}/{action=Index}/{id?}");
+// Map API controllers
+app.MapControllers(); // Ensures API routes are mapped correctly
 
 // Serve the fallback file for SPA apps (if applicable)
 app.MapFallbackToFile("index.html");

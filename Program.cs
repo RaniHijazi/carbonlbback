@@ -14,22 +14,36 @@ services.AddScoped<IStoreRepository, StoreRepository>();
 // Add controllers with views
 services.AddControllersWithViews();
 
+// Determine the environment
+var environment = builder.Environment;
+
 // Configure the DbContext with SQL Server
 services.AddDbContext<DataContext>(options =>
-    options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));
-
-// Add Swagger for API documentation
-services.AddSwaggerGen(c =>
 {
-    c.SwaggerDoc("v1", new() { Title = "My API", Version = "v1" });
+    var connectionString = environment.IsDevelopment()
+        ? builder.Configuration.GetConnectionString("DevelopmentConnection") // Development database
+        : builder.Configuration.GetConnectionString("ProductionConnection"); // Production database
+
+    options.UseSqlServer(connectionString);
 });
 
-// Add CORS policy to allow requests from localhost:3000
+// Add Swagger for API documentation (enabled only in Development)
+if (environment.IsDevelopment())
+{
+    services.AddSwaggerGen(c =>
+    {
+        c.SwaggerDoc("v1", new() { Title = "My API", Version = "v1" });
+    });
+}
+
+// Add CORS policy
 services.AddCors(options =>
 {
     options.AddPolicy("AllowFrontend", policy =>
     {
-        policy.WithOrigins("http://localhost:3000") // Allow specific frontend origin
+        policy.WithOrigins(environment.IsDevelopment()
+                ? "http://localhost:3000" // Development frontend
+                : "https://your-production-frontend.com") // Production frontend
               .AllowAnyHeader()
               .AllowAnyMethod()
               .AllowCredentials(); // Allow credentials if needed
@@ -38,21 +52,21 @@ services.AddCors(options =>
 
 var app = builder.Build();
 
-// Enable Swagger in both development and production
-app.UseSwagger();
-app.UseSwaggerUI(c =>
-{
-    c.SwaggerEndpoint("/swagger/v1/swagger.json", "My API V1");
-});
-
 // Configure the HTTP request pipeline
-if (!app.Environment.IsDevelopment())
+if (environment.IsDevelopment())
 {
-    app.UseHsts(); // Enforce strict transport security in production
+    // Enable Swagger in development
+    app.UseSwagger();
+    app.UseSwaggerUI(c =>
+    {
+        c.SwaggerEndpoint("/swagger/v1/swagger.json", "My API V1");
+    });
+
+    app.UseHttpsRedirection(); // Allow HTTPS redirection in development
 }
 else
 {
-    app.UseHttpsRedirection(); // Allow HTTPS redirection in development
+    app.UseHsts(); // Enforce strict transport security in production
 }
 
 // Enable static files

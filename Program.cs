@@ -43,7 +43,7 @@ services.AddCors(options =>
     {
         policy.WithOrigins(environment.IsDevelopment()
                 ? "http://localhost:3000" // Development frontend
-                : "https://your-production-frontend.com") // Production frontend
+                : "https://carbonlb.vercel.app") // Production frontend
               .AllowAnyHeader()
               .AllowAnyMethod()
               .AllowCredentials(); // Allow credentials if needed
